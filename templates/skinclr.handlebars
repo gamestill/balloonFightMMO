@@ -1,0 +1,56 @@
+<div data-type='h' class="skins-panel panel">
+  {{!--
+  <div class="skincolor_sec">
+    <span style="position: relative;color:white;
+    top: -5px;padding-left:4px;padding-right:4px;top:-16px;font-size:16px;">Change Player:</span>
+    {{#bgclrs}}
+    <span data-clr="{{bgcolor}}" style="background-color:{{bgcolor}}" class="sk_col_spa"></span>
+    {{/bgclrs}}
+  </div> --}}
+  <div class="skin-settings">
+    <span class="region_header"></span>
+  </div>
+  <div  data-type="l" class=" skinl skinbtnstyle skinbtn">
+
+  </div>
+  <div data-type="r" class=" skinr skinbtnstyle skinbtn">
+
+  </div>
+  <div class="skincategory">
+    <ul>
+      {{#skinCats}}
+      <li data-name={{skinCatName}} class="t-unselectable skin-cat skin-cat-nsel">
+        {{skinCatName}}
+        <span style="display:none" class="t-unselectable skincat-selected"></span>
+      </li>
+      {{/skinCats}}
+    </ul>
+  </div>
+
+  <div class="skins-mask">
+
+      {{#each skinCatData}} 
+   <div data-name={{skinCatValue}} class="skin-cat-data">
+    <div data-name={{skinCatValue}} style="width:{{allwidth}}px" class="skin-clrs">
+     
+      {{#each this.catData}}
+        <div data-name={{this.name}} style="left:{{this.left}}px" class="outer-clr-span">
+        <div style="overflow:hidden;" data-name={{this.name}} class="inner-clr-span inner-clr-span_off">
+          <img   data-name={{this.name}} style=" z-index:1;width:{{this.size}}px; height:{{this.size}}px;" class="clrspan"></img>
+          <img style="position: absolute;left:  0;top: 176px;left:  26px;z-index: 0;" class="" src="/../images/shop/stv.png">
+          <div data-name={{this.name}} class="skin-sel-btn mm-btn-main boombtnLower skin-btn-off">
+            <span>Select</span>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+
+      </div>
+      
+ </div>
+       {{/each}}
+
+  </div>
+   
+</div>

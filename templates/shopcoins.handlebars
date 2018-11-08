@@ -1,0 +1,23 @@
+ <ul>
+      {{#packages}}
+   <li class='ol-shop-{{itemcat}}'>
+     <div class="shopdiv">
+      <div class="coinsvalue">
+        <span class="coinsamount t-unselectable">{{coinsvalue}}</span>
+        <span class="coins_plus t-unselectable">+</span>
+        <span class="freecoins t-unselectable">{{coinspercent}}%</span>
+      <span class="coins_equal t-unselectable">=</span>
+      <span class="totalcoins t-unselectable">{{coinstotal}}
+      </span>
+      <span class="totalPrice t-unselectable">{{coinsprice}}</span>
+      </div>
+      <div class="coins-wrapper">
+      <div class="buycoins mm-btn-main mm-coin-buy-btn t-unselectable">  
+         <span class="cust-load"></span>
+         <span class="mm-btn t-unselectable">Buy</span>
+      </div>
+      </div>
+      </div>
+     </li>
+       {{/packages}}
+   </ul>  

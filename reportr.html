@@ -1,0 +1,15 @@
+    <section class="suite">
+      <h1>Sanitize</h1>
+      <dl>
+        <dt>returns a lowercase string</dt>
+        <dd><pre><code>var inputword = 'HELLO WORLD';
+var outputWord = word.sanitize(inputword);
+expect(outputWord).to.equal('hello world');
+expect(outputWord).to.not.equal('heDllo world');
+expect(outputWord).to.be.a('string');</code></pre></dd>
+        <dt>remove any fuk</dt>
+        <dd><pre><code>var input = &quot;HELLO-WORLD&quot;;
+var output = word.sanitize(input);
+expect(output).to.equal('hello world');</code></pre></dd>
+      </dl>
+    </section>

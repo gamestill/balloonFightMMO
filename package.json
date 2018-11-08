@@ -1,0 +1,65 @@
+{
+  "name": "karkio",
+  "version": "0.1.13991",
+  "private": true,
+  "scripts": {
+    "prestart": "grunt",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "async-waterfall": "^0.1.5",
+    "basic-auth-parser": "0.0.2",
+    "binary-pack": "^1.0.2",
+    "body-parser": "~1.15.1",
+    "btoa": "^1.2.1",
+    "classie": "^1.0.0",
+    "cookie-parser": "~1.4.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "~4.13.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "4.0.12",
+    "ip": "^1.1.5",
+    "jquery": "^3.3.1",
+    "pixi-display": "^1.1.1",
+    "pixi.js": "^4.8.0",
+    "primus": "^7.2.1",
+    "primus-emitter": "^3.1.1",
+    "public-ip": "^2.3.5",
+    "redis": "^2.8.0",
+    "request": "^2.87.0",
+    "request-ip": "^2.0.1",
+    "serve-favicon": "~2.3.0",
+    "uws": "^9.148.0",
+    "ws": "^3.3.3"
+  },
+  "devDependencies": {
+    "browserify-versionify": "^1.0.6",
+    "chalk": "^2.4.1",
+    "flightplan": "^0.6.17",
+    "fly": "^2.0.6",
+    "grunt": "^1.0.2",
+    "grunt-browserify": "^5.3.0",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-hashres": "^0.4.1",
+    "grunt-replace": "^1.0.1",
+    "grunt-static-versioning": "^0.2.2",
+    "grunt-string-replace": "^1.3.1",
+    "rsync-slim": "^1.1.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "index.js"
+      ],
+      "data-cover-never": "mode_modules"
+    }
+  }
+}

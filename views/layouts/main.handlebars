@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Kark.io!!! </title>
+	<meta name="viewport" content="minimal-ui, user-scalable=no, initial-scale=0.7, maximum-scale=0.7, width=device-width">
+	<meta name="description" content="Play with people around the world and try to become the best!">
+	<meta property="og:description" content="Play with people around the world and try to become the best!" />
+	 <meta name="keywords" content="karkio, kark, io, animal, animalss, snakes, cows, game, games, web game, html5, fun, flash">
+	<meta property="og:type" content="website" />
+  <meta property="og:title" content="kark.io" />
+  <meta property="og:url" content="http://kark.io/" />
+  <meta property="og:site_name" content="kark.io" />
+  <meta property="og:image" content="{{dir}}images//fbthumb3.jpg" />
+  <link rel="image_src" href="{{dir}}images//fbthumb3.jpg" />
+	<link rel="icon" href="{{dir}}images/favicon.ico">
+<meta name="author" content="">
+
+	<link rel="icon" href="data:,"> {{!-- google analytics --}}
+	<script>
+		 window.ktheme = 2;
+		window.appStarted = null;
+		window.totalScripts = 6;
+		window.script_loadedCount = 0;
+		window.pbtnLoading = null; // animation related
+		window.stillLoading = null; // shows message during loading on click
+		window.percent_scr_loaded = 0; // percent of script loaded
+		window.loadBarEle_dom = null;
+		window.doc_loaded = null;
+		window.appCl_loaded = false;
+		window.debugMode = false;
+
+		function googleLoginCheck() {
+			if (window.appCl_loaded === false) {
+				setTimeout(googleLoginCheck, 100);
+				return;
+			}
+			window.gapiInit();
+		}
+
+		window.gapinit = function () {
+			googleLoginCheck();
+		};
+		window.gaperror = function () {
+			console.log('error loading google login');
+		}
+
+		window.updateLoadingView = function () {
+			if (window.totalScripts <= 0) {
+				return;
+			}
+			window.percent_scr_loaded = Math.floor((window.script_loadedCount / window.totalScripts) * 100);
+			if (document.readyState === 'complete') {
+				if (window.loadBarEle_dom === null) {
+					window.loadBarEle_dom = document.getElementById("lbar");
+				}
+				if (parseInt(window.percent_scr_loaded) > 50) {
+					var spanEle = document.getElementById('cgs');
+					if ('textContent' in spanEle) {
+						spanEle.textContent = 'Loading files';
+					} else {
+						spanEle.innerText = 'Loading files';
+					}
+				}
+				var donePercent = Math.min(99.6, window.percent_scr_loaded);
+				window.loadBarEle_dom.style.width = ('' + donePercent.toString() + "%");
+			}
+		}
+
+
+		window.scriptload = function (type) {
+			window.script_loadedCount++;
+
+			if (type === 'gs') {
+				gapinit();
+			} 
+			window.updateLoadingView();
+
+		}
+
+		window.ga = window.ga || function () {
+			(ga.q = ga.q || []).push(arguments)
+		};
+		ga.l = +new Date;
+		ga('create', 'UA-84123825-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script onload="scriptload('gs3')" async src='https://www.google-analytics.com/analytics.js'></script>
+	<link rel="stylesheet" href="{{dir}}stylesheets/stylesheet.4531de8b.css">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script> (adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-3466697442043408",
+enable_page_level_ads: true
+});
+</script>
+
+	{{!-- <script onload="scriptload('gs')" onerror="gaperror()" src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="880217176157-4c7va4dmdlau1uov5mh5rdtua2gabs9p.apps.googleusercontent.com">
+	<script onload="scriptload('gs2')" src="https://smartlock.google.com/client" async defer></script> --}}
+
+</head>
+
+<body>
+	{{!-- <script>
+		window.fbReady = false;
+		(function fCheck() {
+			if (window.fbReady === false) {
+
+				setTimeout(fCheck, 50);
+				return;
+			}
+			if (!window.fStatus) {
+				setTimeout(fCheck, 50);
+				return;
+			}
+
+			var r = window._fd;
+			window.fStatus(r);
+			delete window._fd;
+		})();
+
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1771754096378256',
+				cookie: true,
+				xfbml: true,
+				version: 'v2.11'
+			});
+			FB.getLoginStatus(function (response) {
+				window._fd = response;
+				window.fbReady = true;
+			});
+		};
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>  --}}
+	{{{body}}}
+</body>
+<script>
+	        window.region = null;
+	function docLoadCheck() {
+		if (!window.doc_loaded) {
+			setTimeout(docLoadCheck, 100);
+			return;
+		}
+
+		if (window.loadBar === null) {
+			window.loadBar = document.getElementById("lbar");
+		}
+
+		if (parseInt(window.percent_scr_loaded) > 50 && parseInt(window.percent_scr_loaded)<100) {
+			var spanEle = document.getElementById('cgs');
+			if ('textContent' in spanEle) {
+				spanEle.textContent = 'Loading files';
+			} else {
+				spanEle.innerText = 'Loading files';
+			}
+		}
+		var donePercent = Math.min(99.6, window.percent_scr_loaded);
+		window.loadBar.style.width = ('' + donePercent.toString() + "%");
+		window.doc_loaded = true;
+		window.appReadyToStart();
+	}
+	docLoadCheck();
+
+Number.prototype.fixed = function (n) {
+    n = n || 3;
+    return parseFloat(this.toFixed(n));
+};
+ Number.prototype.zeroPad = function () {
+        return ('0' + this).slice(-2);
+    };
+
+    Number.prototype.zeroPadC = function (length) {
+        length = length || 2; // defaults to 2 if no parameter is passed
+        return (new Array(length).join('0') + this).slice(length * -1);
+    };
+    if (!Date.now) {
+        Date.now = function now() {
+            return new Date().getTime();
+        };
+    }
+window.performance = window.performance || {};
+performance.now = (function() {
+  return performance.now       ||
+         performance.mozNow    ||
+         performance.msNow     ||
+         performance.oNow      ||
+         performance.webkitNow ||
+         function() { return Date.now(); };
+})();
+</script>
+
+</html>

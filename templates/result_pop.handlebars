@@ -1,0 +1,63 @@
+ <img  id="result-logo" class="t-unselectable" src="images/_logo.png" style="position: relative;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    transform-origin:top;
+    margin: auto;" />
+  <span id="result-esc" style="position: absolute;
+    color: wheat;
+    left: 0;
+    bottom: 5px;
+    right: 0;">Press esc to go back</span>
+  <div hidden="" id="statsPanel">
+      <span class="next-match-time"></span>
+    
+    <header class="t-unselectable" style="       font-size: 35px;
+    background-color: #ff000078;
+    width: 300px;
+    text-align: center;
+    display: block;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0px;
+    margin: auto;
+    height: 59px;
+    text-shadow: 3px 2px 3px #330c0c99;
+    position: absolute;
+    line-height: 56px;
+    color: #f5cf17;
+    border: 2px solid #ff3c3c;
+    border-top: 0;">Match Results</header>
+
+  <span style="position: absolute;
+    left: 205px;
+    top: 80px;
+    color: wheat;
+    font-size: 36px;
+    padding: 10px; ">Your Rank</span>
+  <span style="position: absolute;
+    left: 414px;
+    top: 79px;
+    color: wheat;
+    font-size: 40px;
+    padding: 10px;
+    background-color: red;" id="final-rank">#{{rank}}</span>
+
+    <div class="stat-headings">
+      <span class="name">Name</span>
+      <span>Pops</span>
+      <span>Deaths</span>
+
+    </div>
+    <ul id="result-ul">
+        {{#items}}
+        <li >
+          <span class="pl-name">{{name}}</span>  
+          <span class="pl-pops">{{pops}}</span>  
+          <span class="pl-deaths">{{deaths}}</span>  
+        </li>
+        {{/items}}
+    </ul>
+  </div>
